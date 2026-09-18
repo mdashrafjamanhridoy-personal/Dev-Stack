@@ -1,35 +1,48 @@
-# React + TypeScript + Vite
+# 🧱 Dev Stack
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A responsive **Dev Stack Builder** that helps developers explore technologies and create their own development stack. The interface follows the provided Figma direction with a clean white layout, compact cards, a shared orange → pink → violet gradient, and a responsive mobile experience.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Browse technologies from a separate JSON file.
+- Add/remove technologies from **Your Stack** with duplicate protection.
+- Responsive navbar, hero, technology grid, stack sidebar, projects, about, contact and footer.
 
-## React Compiler
+## 🛠️ Technologies
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- React.js
+- TypeScript
+- Tailwind CSS
+- Vite
+- React-Toastify
+- JSON
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+## 📦 Run locally
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## 🧠 React Questions
+
+### 1. What is JSX, and why is it used in React?
+JSX is a syntax that lets us write UI-like HTML inside JavaScript or TypeScript. React uses it to describe what the interface should look like in a readable way.
+
+### 2. What is the difference between props and state?
+Props are values passed from a parent component to a child component. State is data a component owns and can change over time.
+
+### 3. What does the `useState` hook do, and where did you use it in this project?
+`useState` stores changing data inside a component. I used it for the technology list, selected stack, loading state, active category, and mobile menu state.
+
+### 4. What does the `useEffect` hook do, and why did you need it to load the JSON data?
+`useEffect` runs side effects after rendering. I used it to fetch the local JSON file when the app loads, then update the technology list.
+
+### 5. Why does every item in a `.map()` list need a unique `key` prop?
+React uses the key to identify each item between renders. A stable unique key helps React update the correct item efficiently.
+
+### 6. What is conditional rendering? Show one place you used it.
+Conditional rendering means showing different UI depending on a condition. In the stack sidebar, I show an empty message when `stack.length === 0`; otherwise I show the selected technologies.
+
+### 7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
+The parent passes data through props. The parent can also pass a function as a prop, and the child calls that function to send an event or value back.
