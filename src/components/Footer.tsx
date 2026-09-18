@@ -13,7 +13,7 @@ const Footer = () => {
               href="#"
               className="inline-flex items-center gap-2"
             >
-              <span className="flex h-5 w-5 items-center justify-center rounded bg-gradient-to-br from-fuchsia-500 to-pink-500 text-[9px] font-bold text-white">
+              <span className="flex h-5 w-5 items-center justify-center rounded bg-linear-to-br from-fuchsia-500 to-pink-500 text-[9px] font-bold text-white">
                 DS
               </span>
 

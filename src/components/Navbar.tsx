@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50 border-b border-gray-200 bg-white">
-      <div className="mx-auto flex h-20 max-w-[1200px] items-center justify-between px-5 sm:px-6">
+      <div className="mx-auto flex h-20 max-w-300 items-center justify-between px-5 sm:px-6">
 
         {/* Hamburger */}
         <button
@@ -25,7 +25,7 @@ const Navbar = () => {
           onClick={closeMenu}
           className="flex items-center gap-3 md:static"
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-fuchsia-500 to-pink-600 text-sm font-bold text-white">
+          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-linear-to-br from-fuchsia-500 to-pink-600 text-sm font-bold text-white">
             DS
           </span>
 

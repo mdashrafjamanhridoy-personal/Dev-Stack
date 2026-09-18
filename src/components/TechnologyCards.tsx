@@ -97,7 +97,7 @@ const TechnologyCards = () => {
       <div className="mb-6">
         <h1 className="text-4xl font-bold text-slate-900">
           Explore the{" "}
-          <span className="bg-gradient-to-r from-orange-500 via-pink-500 to-violet-500 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-orange-500 via-pink-500 to-violet-500 bg-clip-text text-transparent">
             Technologies
           </span>
         </h1>
@@ -145,7 +145,7 @@ const TechnologyCards = () => {
                   </h3>
 
                   {/* Description */}
-                  <p className="mb-4 min-h-[48px] text-sm leading-6 text-slate-500">
+                  <p className="mb-4 min-h-12 text-sm leading-6 text-slate-500">
                     {technology.description}
                   </p>
 
